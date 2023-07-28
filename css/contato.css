@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.destaque-contato {
+    background: url(../assets/destaque-contato.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--quaternary-color);
+    font-weight: 300;
+    font-size: 1.8rem;
+}
+
+.destaque-contato h2 {
+    font-size: clamp(2rem, 10vw, 6rem);
+    max-width: 735px;
+    margin: 24px 0;
+}
+
+.destaque-contato p {
+    line-height: var(--line-height-secondary);
+    letter-spacing: var(--letter-spacing);
+    max-width: 900px;
+    line-height: 3rem;
+    
+}
+
+.assunto {
+    margin-top: var(--margin-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    
+}
+
+.assunto form {
+    margin-bottom: 5rem;
+}
+
+.texto-contato {
+    max-width: 600px;   
+}
+
+.texto-contato h2 {
+    font-size: 4em;
+    margin-bottom: 3rem;
+}
+.texto-contato p {
+    font-size: 2rem;
+}
+address, .tel, .email {
+    margin-right: 3rem;
+}
+
+
+.enderecos-instituicao {
+    margin: 20px 0px 100px;   
+    display: flex;
+}
+.endereco-texto b, .endereco-tel-email b {
+    font-size: 2rem;
+}
+.endereco-texto p, .endereco-tel-email a {
+    font-size: 1.5rem;
+}
+
+address, .tel, .email {    
+    display: flex;
+    align-items: center;
+
+}
+.endereco-texto, .endereco-tel-email {
+    display: flex;
+    flex-direction: column;
+}
+
+.enderecos img {
+    margin: 0px 9px 0px;
+}
+.tel a, .email a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.horario {
+  margin: 40px 0;
+}
+.contato-mapa iframe {
+    width: 100%;
+
+}
+
+@media screen and (max-width:1190px) {
+    .assunto {
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width:793px){ 
+    .enderecos-instituicao{
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .assunto{flex-direction: column-reverse;}
+
+    .assunto form{ margin-bottom: 20px;}
+
+    .texto-contato{margin-bottom: 20px;}
+
+
+    .enderecos-instituicao div {
+        margin: 1.4rem;
+    }
+
+}
+
+@media screen and (max-width:605px) {
+    .enderecos img {
+        width: 50px;
+    }
+
+    .destaque-contato  {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:400px) {  
+    html {
+        font-size: 45%;
+    }
+
+    .assunto input, textarea {
+        /* box-shadow: 0 0 5px #00000099; */
+        border: 1px solid rgba(0, 0, 0, 0.259);
+    }
+}
